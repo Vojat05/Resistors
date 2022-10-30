@@ -11,7 +11,7 @@ def resource_path(relative):
 def find(err, x, y, z, n):
     value = getVal.get()
     if value.isdigit() is False:
-        err.config(text='Hodnota musí obsahovat pouze celá čísla')
+        err.config(text='Value must bo composed of whole numbers.')
     else:
         if int(value) < 10:
             err.config(text='')
@@ -58,43 +58,42 @@ def find(err, x, y, z, n):
             pruh3Draw(z.get())
             pruhnDraw(n.get())
         if int(value) >= 10000000000:
-            err.config(text='Rezistor s touto hodnotou neexistuje')
+            err.config(text='Resistor with this value doesn\'t exist')
 
-# Hlavní GUI
+# Main GUI
 window = Tk()
 window.geometry("900x710")
-window.title("Výpočet Rezistorů")
-#window.resizable(False, False)
-imgbck = Image.open(resource_path('../Pics/bg.jpg'))
+window.title("Resistor Calculator")
+imgbck = Image.open(resource_path('Resistors/Pics/bg.jpg'))
 imgbckk = ImageTk.PhotoImage(image=imgbck)
 Label(window, image=imgbckk).place(x=0, y=0)
 canvas = Canvas(window, width=900, height=710)
 canvas.configure(bg='#3e3e42', highlightthickness=4, highlightbackground='#646464')
 canvas.pack(side='left', expand=True)
 
-# Obrázek rezistoru.
-image = Image.open(resource_path('../Pics/normal2.png'))
+# Basic resistor picture 
+image = Image.open(resource_path('Resistors/Pics/normal2.png'))
 image = image.resize((480, 270), Image.ANTIALIAS)
 img1 = ImageTk.PhotoImage(image=image)
 canvas.create_image(450, 100, image=img1)
 
-# Označení sekcí výběru.
-label = Label(canvas, text="1. Pruh", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
+# Labeling the sections.
+label = Label(canvas, text="1. Line", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
 label.place(x=112, y=297)
-label1 = Label(canvas, text="2. Pruh", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
+label1 = Label(canvas, text="2. Line", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
 label1.place(x=268, y=297)
-label2 = Label(canvas, text="3. Pruh", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
+label2 = Label(canvas, text="3. Line", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
 label2.place(x=423, y=297)
-label3 = Label(canvas, text="Násobek", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
-label3.place(x=570, y=297)
-label4 = Label(canvas, text="Tolerance", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
+label3 = Label(canvas, text="Multiplicator", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
+label3.place(x=560, y=297)
+label4 = Label(canvas, text="Toleration", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
 label4.place(x=717, y=297)
-label7 = Label(canvas, text="Předpony", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
-label7.place(x=42, y=58)
+label7 = Label(canvas, text="Prefix", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
+label7.place(x=56, y=58)
 err = Label(canvas, text='', font=('Arial', 14), bg='#3e3e42', fg='#e80707')
 err.place(x=290, y=677)
 
-# Výsledkové pole
+# Answer label.
 p_hotovo = 0
 toler = 0
 labelr = Label(canvas, text=f"R: {p_hotovo} Ω", font=("Arial", 20, "bold"), bg='#3e3e42', fg='#10bbbb')
@@ -102,11 +101,11 @@ labelr.place(x=350, y=160)
 labelt = Label(canvas, text=f"T: {toler} %", font=("Arial", 20, "bold"), bg='#3e3e42', fg='#10bbbb')
 labelt.place(x=350, y=200)
 
-pruh_1 = ["Černá", "Hnědá", "Červená", "Oranžová", "Žlutá", "Zelená", "Modrá", "Fialová", "Šedá", "Bílá"]
-pruh_2 = ["Černá", "Hnědá", "Červená", "Oranžová", "Žlutá", "Zelená", "Modrá", "Fialová", "Šedá", "Bílá"]
-pruh_3 = ["Černá", "Hnědá", "Červená", "Oranžová", "Žlutá", "Zelená", "Modrá", "Fialová", "Šedá", "Bílá"]
-nasobek = ["Černá", "Hnědá", "Červená", "Oranžová", "Žlutá", "Zelená", "Modrá", "Fialová", "Zlatá", "Stříbrná"]
-tolerance = ["Hnědá", "Červená", "Zelená", "Modrá", "Fialová", "Šedá", "Zlatá", "Stříbrná", "Žádná"]
+pruh_1 = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"]
+pruh_2 = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"]
+pruh_3 = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"]
+nasobek = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Golden", "Silver"]
+tolerance = ["Brown", "Red", "Green", "Blue", "Purple", "Gray", "Golden", "Silver", "None"]
 hodnoty = ["Ω", "kΩ", "MΩ"]
 x = IntVar()
 y = IntVar()
@@ -116,14 +115,14 @@ t = IntVar()
 h = IntVar()
 getVal = StringVar()
 
-# Zadávací pole pro hledání rezistoru
+# Resistor search part.
 canvas.create_rectangle(0, 620, 905, 625, fill='#292929')
 
 entry = ttk.Entry(canvas, width=20, font=('Arial', 13, 'bold'), textvariable=getVal)
 entry.place(x=370, y=645)
-Label(canvas, text='Najít rezistor', font=('Arial', 15, 'bold'), bg='#3e3e42', fg='#10bbbb').place(x=190, y=640)
+Label(canvas, text='Find value', font=('Arial', 15, 'bold'), bg='#3e3e42', fg='#10bbbb').place(x=200, y=640)
 Label(canvas, text='Ω', bg='#fff', font=('Arial', 9, 'bold')).place(x=535, y=647)
-ttk.Button(canvas, text='Najít', command=lambda: find(err, x, y, z, n)).place(x=615, y=645)
+ttk.Button(canvas, text='Find', command=lambda: find(err, x, y, z, n)).place(x=615, y=645)
 
 
 def clear():
@@ -132,7 +131,7 @@ def clear():
 
 Button(canvas, text='❌', font=('Arial', 9), command=clear, bd=1).place(x=558, y=646)
 
-# Segment funkcí.
+# Function segment.
 def label_polyoval(width, height, locx, locy):
     points = [locx-width/2+height/4, locy-height/2,
               locx+width/2-height/4, locy-height/2,
@@ -147,7 +146,7 @@ def label_polyoval(width, height, locx, locy):
 label_polyoval(width=80, height=32, locx=143, locy=309)
 label_polyoval(width=80, height=32, locx=298, locy=309)
 label_polyoval(width=80, height=32, locx=453, locy=309)
-label_polyoval(width=100, height=32, locx=606, locy=309)
+label_polyoval(width=120, height=32, locx=610, locy=309)
 label_polyoval(width=110, height=32, locx=758, locy=309)
 label_polyoval(width=100, height=32, locx=81, locy=70)
 label_polyoval(width=170, height=32, locx=253, locy=655)
@@ -287,34 +286,34 @@ def pruh1Draw(x):
     global ima
     global img2
     if 1 == x:
-        ima = Image.open(resource_path('../Pics/hneda.png'))
+        ima = Image.open(resource_path('Resistors/Pics/hneda.png'))
 
     elif 2 == x:
-        ima = Image.open(resource_path('../Pics/cervena.png'))
+        ima = Image.open(resource_path('Resistors/Pics/cervena.png'))
 
     elif 3 == x:
-        ima = Image.open(resource_path('../Pics/oranzova.png'))
+        ima = Image.open(resource_path('Resistors/Pics/oranzova.png'))
 
     elif 4 == x:
-        ima = Image.open(resource_path('../Pics/zluta.png'))
+        ima = Image.open(resource_path('Resistors/Pics/zluta.png'))
 
     elif 5 == x:
-        ima = Image.open(resource_path('../Pics/zelena.png'))
+        ima = Image.open(resource_path('Resistors/Pics/zelena.png'))
 
     elif 6 == x:
-        ima = Image.open(resource_path('../Pics/modra.png'))
+        ima = Image.open(resource_path('Resistors/Pics/modra.png'))
 
     elif 7 == x:
-        ima = Image.open(resource_path('../Pics/fialova.png'))
+        ima = Image.open(resource_path('Resistors/Pics/fialova.png'))
 
     elif 8 == x:
-        ima = Image.open(resource_path('../Pics/seda.png'))
+        ima = Image.open(resource_path('Resistors/Pics/seda.png'))
 
     elif 9 == x:
-        ima = Image.open(resource_path('../Pics/bila.png'))
+        ima = Image.open(resource_path('Resistors/Pics/bila.png'))
 
     else:
-        ima = Image.open(resource_path('../Pics/cerna.png'))
+        ima = Image.open(resource_path('Resistors/Pics/cerna.png'))
 
     ima = ima.resize((480, 270), Image.ANTIALIAS)
     img2 = ImageTk.PhotoImage(image=ima)
@@ -327,34 +326,34 @@ def pruh2Draw(y):
     global imay
     global img2y
     if 1 == y:
-        imay = Image.open(resource_path('../Pics/hneda.png'))
+        imay = Image.open(resource_path('Resistors/Pics/hneda.png'))
 
     elif 2 == y:
-        imay = Image.open(resource_path('../Pics/cervena.png'))
+        imay = Image.open(resource_path('Resistors/Pics/cervena.png'))
 
     elif 3 == y:
-        imay = Image.open(resource_path('../Pics/oranzova.png'))
+        imay = Image.open(resource_path('Resistors/Pics/oranzova.png'))
 
     elif 4 == y:
-        imay = Image.open(resource_path('../Pics/zluta.png'))
+        imay = Image.open(resource_path('Resistors/Pics/zluta.png'))
 
     elif 5 == y:
-        imay = Image.open(resource_path('../Pics/zelena.png'))
+        imay = Image.open(resource_path('Resistors/Pics/zelena.png'))
 
     elif 6 == y:
-        imay = Image.open(resource_path('../Pics/modra.png'))
+        imay = Image.open(resource_path('Resistors/Pics/modra.png'))
 
     elif 7 == y:
-        imay = Image.open(resource_path('../Pics/fialova.png'))
+        imay = Image.open(resource_path('Resistors/Pics/fialova.png'))
 
     elif 8 == y:
-        imay = Image.open(resource_path('../Pics/seda.png'))
+        imay = Image.open(resource_path('Resistors/Pics/seda.png'))
 
     elif 9 == y:
-        imay = Image.open(resource_path('../Pics/bila.png'))
+        imay = Image.open(resource_path('Resistors/Pics/bila.png'))
 
     else:
-        imay = Image.open(resource_path('../Pics/cerna.png'))
+        imay = Image.open(resource_path('Resistors/Pics/cerna.png'))
 
     imay = imay.resize((480, 270), Image.ANTIALIAS)
     img2y = ImageTk.PhotoImage(image=imay)
@@ -367,34 +366,34 @@ def pruh3Draw(z):
     global imaz
     global img2z
     if 1 == z:
-        imaz = Image.open(resource_path('../Pics/hneda.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/hneda.png'))
 
     elif 2 == z:
-        imaz = Image.open(resource_path('../Pics/cervena.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/cervena.png'))
 
     elif 3 == z:
-        imaz = Image.open(resource_path('../Pics/oranzova.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/oranzova.png'))
 
     elif 4 == z:
-        imaz = Image.open(resource_path('../Pics/zluta.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/zluta.png'))
 
     elif 5 == z:
-        imaz = Image.open(resource_path('../Pics/zelena.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/zelena.png'))
 
     elif 6 == z:
-        imaz = Image.open(resource_path('../Pics/modra.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/modra.png'))
 
     elif 7 == z:
-        imaz = Image.open(resource_path('../Pics/fialova.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/fialova.png'))
 
     elif 8 == z:
-        imaz = Image.open(resource_path('../Pics/seda.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/seda.png'))
 
     elif 9 == z:
-        imaz = Image.open(resource_path('../Pics/bila.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/bila.png'))
 
     else:
-        imaz = Image.open(resource_path('../Pics/cerna.png'))
+        imaz = Image.open(resource_path('Resistors/Pics/cerna.png'))
 
     imaz = imaz.resize((480, 270), Image.ANTIALIAS)
     img2z = ImageTk.PhotoImage(image=imaz)
@@ -407,34 +406,34 @@ def pruhnDraw(n):
     global iman
     global img2n
     if 1 == n:
-        iman = Image.open(resource_path('../Pics/hneda.png'))
+        iman = Image.open(resource_path('Resistors/Pics/hneda.png'))
 
     elif 2 == n:
-        iman = Image.open(resource_path('../Pics/cervena.png'))
+        iman = Image.open(resource_path('Resistors/Pics/cervena.png'))
 
     elif 3 == n:
-        iman = Image.open(resource_path('../Pics/oranzova.png'))
+        iman = Image.open(resource_path('Resistors/Pics/oranzova.png'))
 
     elif 4 == n:
-        iman = Image.open(resource_path('../Pics/zluta.png'))
+        iman = Image.open(resource_path('Resistors/Pics/zluta.png'))
 
     elif 5 == n:
-        iman = Image.open(resource_path('../Pics/zelena.png'))
+        iman = Image.open(resource_path('Resistors/Pics/zelena.png'))
 
     elif 6 == n:
-        iman = Image.open(resource_path('../Pics/modra.png'))
+        iman = Image.open(resource_path('Resistors/Pics/modra.png'))
 
     elif 7 == n:
-        iman = Image.open(resource_path('../Pics/fialova.png'))
+        iman = Image.open(resource_path('Resistors/Pics/fialova.png'))
 
     elif 8 == n:
-        iman = Image.open(resource_path('../Pics/zlata.png'))
+        iman = Image.open(resource_path('Resistors/Pics/zlata.png'))
 
     elif 9 == n:
-        iman = Image.open(resource_path('../Pics/stribrna.png'))
+        iman = Image.open(resource_path('Resistors/Pics/stribrna.png'))
 
     else:
-        iman = Image.open(resource_path('../Pics/cerna.png'))
+        iman = Image.open(resource_path('Resistors/Pics/cerna.png'))
 
     iman = iman.resize((480, 270), Image.ANTIALIAS)
     img2n = ImageTk.PhotoImage(image=iman)
@@ -447,31 +446,31 @@ def pruhtDraw(t):
     global imat
     global img2t
     if 1 == t:
-        imat = Image.open(resource_path('../Pics/cervena.png'))
+        imat = Image.open(resource_path('Resistors/Pics/cervena.png'))
 
     elif 2 == t:
-        imat = Image.open(resource_path('../Pics/zelena.png'))
+        imat = Image.open(resource_path('Resistors/Pics/zelena.png'))
 
     elif 3 == t:
-        imat = Image.open(resource_path('../Pics/modra.png'))
+        imat = Image.open(resource_path('Resistors/Pics/modra.png'))
 
     elif 4 == t:
-        imat = Image.open(resource_path('../Pics/fialova.png'))
+        imat = Image.open(resource_path('Resistors/Pics/fialova.png'))
 
     elif 5 == t:
-        imat = Image.open(resource_path('../Pics/seda.png'))
+        imat = Image.open(resource_path('Resistors/Pics/seda.png'))
 
     elif 6 == t:
-        imat = Image.open(resource_path('../Pics/zlata.png'))
+        imat = Image.open(resource_path('Resistors/Pics/zlata.png'))
 
     elif 7 == t:
-        imat = Image.open(resource_path('../Pics/stribrna.png'))
+        imat = Image.open(resource_path('Resistors/Pics/stribrna.png'))
 
     elif 8 == t:
-        imat = Image.open(resource_path('../Pics/default.png'))
+        imat = Image.open(resource_path('Resistors/Pics/default.png'))
 
     else:
-        imat = Image.open(resource_path('../Pics/hneda.png'))
+        imat = Image.open(resource_path('Resistors/Pics/hneda.png'))
 
     imat = imat.resize((480, 270), Image.ANTIALIAS)
     img2t = ImageTk.PhotoImage(image=imat)
@@ -479,7 +478,7 @@ def pruhtDraw(t):
     click()
 pruhtDraw(0)
 
-# Výběrová tlačítka pro 1. pruh.
+# Buttons.
 for index in range(len(pruh_1)):
     radiobutton1 = Radiobutton(canvas, text=pruh_1[index], variable=x, value=index, indicatoron=0, width=10,
                                bg="#c4c4c4", command=lambda: pruh1Draw(x.get()))
@@ -504,7 +503,6 @@ for index in range(len(pruh_1)):
     else:
         radiobutton1.place(x=105, y=565)
 
-# Výběrová tlačítka pro 2. pruh.
 for index in range(len(pruh_2)):
     radiobutton2 = Radiobutton(canvas, text=pruh_2[index], variable=y, value=index, indicatoron=0, width=10,
                                bg="#c4c4c4", command=lambda: pruh2Draw(y.get()))
@@ -529,7 +527,6 @@ for index in range(len(pruh_2)):
     else:
         radiobutton2.place(x=260, y=565)
 
-# Výběrová tlačítka pro 3. pruh.
 for index in range(len(pruh_3)):
     radiobutton3 = Radiobutton(canvas, text=pruh_3[index], variable=z, value=index, indicatoron=0, width=10,
                                bg="#c4c4c4", command=lambda: pruh3Draw(z.get()))
@@ -554,7 +551,6 @@ for index in range(len(pruh_3)):
     else:
         radiobutton3.place(x=415, y=565)
 
-# Výběrová tlačítka pro násobek.
 for index in range(len(nasobek)):
     radiobutton4 = Radiobutton(canvas, text=nasobek[index], variable=n, indicatoron=0, width=10, value=index,
                                bg="#c4c4c4", command=lambda: pruhnDraw(n.get()))
@@ -579,7 +575,6 @@ for index in range(len(nasobek)):
     else:
         radiobutton4.place(x=570, y=575)
 
-# Výběrová tlačítka pro toleranci.
 for index in range(len(tolerance)):
     radiobutton5 = Radiobutton(canvas, text=tolerance[index], variable=t, indicatoron=0, width=10, value=index,
                                bg="#c4c4c4", command=lambda: pruhtDraw(t.get()))
@@ -602,7 +597,6 @@ for index in range(len(tolerance)):
     else:
         radiobutton5.place(x=725, y=580)
 
-# Výběrová tlačítka pro hodnoty.
 for index in range(len(hodnoty)):
     radiobutton6 = Radiobutton(canvas, text=hodnoty[index], variable=h, indicatoron=0, width=5, value=index,
                                command=lambda: jedna(p_hotovo), bg="#c4c4c4")
@@ -613,7 +607,7 @@ for index in range(len(hodnoty)):
     else:
         radiobutton6.place(x=60, y=150)
 
-# Kreslení barevných kostiček
+# Color blocks before each radiobutton.
 drawBlock(90, 340, 100, 360, 245, 340, 255, 360, 400, 340, 410, 360, 555, 340, 565, 360, 710, 340, 720, 360)
 
 window.mainloop()
