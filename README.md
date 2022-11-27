@@ -18,4 +18,4 @@ The only change other than translations are propper resizing of labels to fit co
 
 ## Version 1.2
 
-New background Picture, set FullHD screen size on startup and a typo fix in an error message for yhe resistor search function.
+New background Picture, set FullHD screen size on startup and a typo fix in an error message for the resistor search function.
