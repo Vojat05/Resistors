@@ -15,3 +15,7 @@ The initial version of this program.
 
 In this version the main theme was translation of the source code.
 The only change other than translations are propper resizing of labels to fit correctly.
+
+## Version 1.2
+
+New background Picture, set FullHD screen size on startup and a typo fix in an error message for yhe resistor search function.
