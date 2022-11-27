@@ -11,7 +11,7 @@ def resource_path(relative):
 def find(err, x, y, z, n):
     value = getVal.get()
     if value.isdigit() is False:
-        err.config(text='Value must bo composed of whole numbers.')
+        err.config(text='Value must be a whole numbers.')
     else:
         if int(value) < 10:
             err.config(text='')
@@ -62,13 +62,13 @@ def find(err, x, y, z, n):
 
 # Main GUI
 window = Tk()
-window.geometry("900x710")
+window.geometry("1920x1080")
 window.title("Resistor Calculator")
 imgbck = Image.open(resource_path('../Pics/bg.jpg'))
 imgbckk = ImageTk.PhotoImage(image=imgbck)
 Label(window, image=imgbckk).place(x=0, y=0)
 canvas = Canvas(window, width=900, height=710)
-canvas.configure(bg='#3e3e42', highlightthickness=4, highlightbackground='#646464')
+canvas.configure(bg='#3e3e42', highlightthickness=2, highlightbackground='#646464')
 canvas.pack(side='left', expand=True)
 
 # Basic resistor picture 
@@ -91,7 +91,7 @@ label4.place(x=717, y=297)
 label7 = Label(canvas, text="Prefix", font=("Arial", 12, "bold"), fg='#10bbbb', bg="#3e3e42")
 label7.place(x=56, y=58)
 err = Label(canvas, text='', font=('Arial', 14), bg='#3e3e42', fg='#e80707')
-err.place(x=290, y=677)
+err.place(x=310, y=677)
 
 # Answer label.
 p_hotovo = 0
