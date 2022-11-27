@@ -1,11 +1,13 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
-import os
+from functions import *
 
 
-def resource_path(relative):
-    return os.path.join(os.environ.get("_MEIPASS2", os.path.abspath(".")), relative)
+
+
+# def resource_path(relative):
+#     return os.path.join(os.environ.get("_MEIPASS2", os.path.abspath(".")), relative)
 
 
 def find(err, x, y, z, n):
