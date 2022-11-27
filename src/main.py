@@ -5,9 +5,9 @@ from functions import *
 # Main GUI setup
 window.geometry("1920x1080")
 window.title("Resistor Calculator")
-Label(window, image=imgbckk).place(x=0, y=0)
 canvas.configure(bg='#3e3e42', highlightthickness=2, highlightbackground='#646464')
 canvas.pack(side='left', expand=True)
+Label(window, image=imgbckk).place(x=0, y=0)
 
 # Basic resistor picture resize and apply
 image = image.resize((480, 270), Image.ANTIALIAS)
