@@ -104,8 +104,8 @@ labelt.place(x=350, y=200)
 pruh_1 = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"]
 pruh_2 = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"]
 pruh_3 = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey", "White"]
-nasobek = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Golden", "Silver"]
-tolerance = ["Brown", "Red", "Green", "Blue", "Purple", "Gray", "Golden", "Silver", "None"]
+nasobek = ["Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Gold", "Silver"]
+tolerance = ["Brown", "Red", "Green", "Blue", "Purple", "Gray", "Gold", "Silver", "None"]
 hodnoty = ["Ω", "kΩ", "MΩ"]
 x = IntVar()
 y = IntVar()
