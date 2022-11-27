@@ -1,10 +1,5 @@
-import os
-from valuedata import *
 from tkinter import END
-
-
-def resource_path(relative):
-    return os.path.join(os.environ.get("_MEIPASS2", os.path.abspath(".")), relative)
+from valuedata import *
 
 
 def find(err, x, y, z, n):

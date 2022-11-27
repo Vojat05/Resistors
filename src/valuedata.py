@@ -1,6 +1,14 @@
+import os
 from tkinter import Tk, StringVar, IntVar, Canvas, Label, ttk
 from PIL import Image, ImageTk
-from functions import resource_path
+
+
+def resource_path(relative):
+    return os.path.join(os.environ.get("_MEIPASS2", os.path.abspath(".")), relative)
+
+# The main window and canvas (the main panel)
+window = Tk()
+canvas = Canvas(window, width=900, height=710)
 
 # Variables for buttons and answer data
 x = IntVar()
@@ -10,10 +18,6 @@ n = IntVar()
 t = IntVar()
 h = IntVar()
 getVal = StringVar()
-
-# The main window and canvas (the main panel)
-window = Tk()
-canvas = Canvas(window, width=900, height=710)
 
 # Variables for the answer and the toleration answer
 p_hotovo = 0
