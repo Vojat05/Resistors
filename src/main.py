@@ -1,5 +1,7 @@
 from tkinter import Radiobutton, Button
+# from functions import find, label_polyoval, pruh1Draw, pruh2Draw, pruh3Draw, pruhnDraw, pruhtDraw, drawBlock, jedna, clear
 from functions import *
+from valuedata import *
 
 
 # Main GUI setup
