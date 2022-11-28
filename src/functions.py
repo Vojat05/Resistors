@@ -207,34 +207,34 @@ def pruh1Draw(x):
     global ima
     global img2
     if 1 == x:
-        ima = Image.open(resource_path('../Pics/hneda.png'))
+        ima = Image.open(resource_path('Pics/hneda.png'))
 
     elif 2 == x:
-        ima = Image.open(resource_path('../Pics/cervena.png'))
+        ima = Image.open(resource_path('Pics/cervena.png'))
 
     elif 3 == x:
-        ima = Image.open(resource_path('../Pics/oranzova.png'))
+        ima = Image.open(resource_path('Pics/oranzova.png'))
 
     elif 4 == x:
-        ima = Image.open(resource_path('../Pics/zluta.png'))
+        ima = Image.open(resource_path('Pics/zluta.png'))
 
     elif 5 == x:
-        ima = Image.open(resource_path('../Pics/zelena.png'))
+        ima = Image.open(resource_path('Pics/zelena.png'))
 
     elif 6 == x:
-        ima = Image.open(resource_path('../Pics/modra.png'))
+        ima = Image.open(resource_path('Pics/modra.png'))
 
     elif 7 == x:
-        ima = Image.open(resource_path('../Pics/fialova.png'))
+        ima = Image.open(resource_path('Pics/fialova.png'))
 
     elif 8 == x:
-        ima = Image.open(resource_path('../Pics/seda.png'))
+        ima = Image.open(resource_path('Pics/seda.png'))
 
     elif 9 == x:
-        ima = Image.open(resource_path('../Pics/bila.png'))
+        ima = Image.open(resource_path('Pics/bila.png'))
 
     else:
-        ima = Image.open(resource_path('../Pics/cerna.png'))
+        ima = Image.open(resource_path('Pics/cerna.png'))
 
     ima = ima.resize((480, 270), Image.ANTIALIAS)
     img2 = ImageTk.PhotoImage(image=ima)
@@ -246,34 +246,34 @@ def pruh2Draw(y):
     global imay
     global img2y
     if 1 == y:
-        imay = Image.open(resource_path('../Pics/hneda.png'))
+        imay = Image.open(resource_path('Pics/hneda.png'))
 
     elif 2 == y:
-        imay = Image.open(resource_path('../Pics/cervena.png'))
+        imay = Image.open(resource_path('Pics/cervena.png'))
 
     elif 3 == y:
-        imay = Image.open(resource_path('../Pics/oranzova.png'))
+        imay = Image.open(resource_path('Pics/oranzova.png'))
 
     elif 4 == y:
-        imay = Image.open(resource_path('../Pics/zluta.png'))
+        imay = Image.open(resource_path('Pics/zluta.png'))
 
     elif 5 == y:
-        imay = Image.open(resource_path('../Pics/zelena.png'))
+        imay = Image.open(resource_path('Pics/zelena.png'))
 
     elif 6 == y:
-        imay = Image.open(resource_path('../Pics/modra.png'))
+        imay = Image.open(resource_path('Pics/modra.png'))
 
     elif 7 == y:
-        imay = Image.open(resource_path('../Pics/fialova.png'))
+        imay = Image.open(resource_path('Pics/fialova.png'))
 
     elif 8 == y:
-        imay = Image.open(resource_path('../Pics/seda.png'))
+        imay = Image.open(resource_path('Pics/seda.png'))
 
     elif 9 == y:
-        imay = Image.open(resource_path('../Pics/bila.png'))
+        imay = Image.open(resource_path('Pics/bila.png'))
 
     else:
-        imay = Image.open(resource_path('../Pics/cerna.png'))
+        imay = Image.open(resource_path('Pics/cerna.png'))
 
     imay = imay.resize((480, 270), Image.ANTIALIAS)
     img2y = ImageTk.PhotoImage(image=imay)
@@ -285,34 +285,34 @@ def pruh3Draw(z):
     global imaz
     global img2z
     if 1 == z:
-        imaz = Image.open(resource_path('../Pics/hneda.png'))
+        imaz = Image.open(resource_path('Pics/hneda.png'))
 
     elif 2 == z:
-        imaz = Image.open(resource_path('../Pics/cervena.png'))
+        imaz = Image.open(resource_path('Pics/cervena.png'))
 
     elif 3 == z:
-        imaz = Image.open(resource_path('../Pics/oranzova.png'))
+        imaz = Image.open(resource_path('Pics/oranzova.png'))
 
     elif 4 == z:
-        imaz = Image.open(resource_path('../Pics/zluta.png'))
+        imaz = Image.open(resource_path('Pics/zluta.png'))
 
     elif 5 == z:
-        imaz = Image.open(resource_path('../Pics/zelena.png'))
+        imaz = Image.open(resource_path('Pics/zelena.png'))
 
     elif 6 == z:
-        imaz = Image.open(resource_path('../Pics/modra.png'))
+        imaz = Image.open(resource_path('Pics/modra.png'))
 
     elif 7 == z:
-        imaz = Image.open(resource_path('../Pics/fialova.png'))
+        imaz = Image.open(resource_path('Pics/fialova.png'))
 
     elif 8 == z:
-        imaz = Image.open(resource_path('../Pics/seda.png'))
+        imaz = Image.open(resource_path('Pics/seda.png'))
 
     elif 9 == z:
-        imaz = Image.open(resource_path('../Pics/bila.png'))
+        imaz = Image.open(resource_path('Pics/bila.png'))
 
     else:
-        imaz = Image.open(resource_path('../Pics/cerna.png'))
+        imaz = Image.open(resource_path('Pics/cerna.png'))
 
     imaz = imaz.resize((480, 270), Image.ANTIALIAS)
     img2z = ImageTk.PhotoImage(image=imaz)
@@ -324,34 +324,34 @@ def pruhnDraw(n):
     global iman
     global img2n
     if 1 == n:
-        iman = Image.open(resource_path('../Pics/hneda.png'))
+        iman = Image.open(resource_path('Pics/hneda.png'))
 
     elif 2 == n:
-        iman = Image.open(resource_path('../Pics/cervena.png'))
+        iman = Image.open(resource_path('Pics/cervena.png'))
 
     elif 3 == n:
-        iman = Image.open(resource_path('../Pics/oranzova.png'))
+        iman = Image.open(resource_path('Pics/oranzova.png'))
 
     elif 4 == n:
-        iman = Image.open(resource_path('../Pics/zluta.png'))
+        iman = Image.open(resource_path('Pics/zluta.png'))
 
     elif 5 == n:
-        iman = Image.open(resource_path('../Pics/zelena.png'))
+        iman = Image.open(resource_path('Pics/zelena.png'))
 
     elif 6 == n:
-        iman = Image.open(resource_path('../Pics/modra.png'))
+        iman = Image.open(resource_path('Pics/modra.png'))
 
     elif 7 == n:
-        iman = Image.open(resource_path('../Pics/fialova.png'))
+        iman = Image.open(resource_path('Pics/fialova.png'))
 
     elif 8 == n:
-        iman = Image.open(resource_path('../Pics/zlata.png'))
+        iman = Image.open(resource_path('Pics/zlata.png'))
 
     elif 9 == n:
-        iman = Image.open(resource_path('../Pics/stribrna.png'))
+        iman = Image.open(resource_path('Pics/stribrna.png'))
 
     else:
-        iman = Image.open(resource_path('../Pics/cerna.png'))
+        iman = Image.open(resource_path('Pics/cerna.png'))
 
     iman = iman.resize((480, 270), Image.ANTIALIAS)
     img2n = ImageTk.PhotoImage(image=iman)
@@ -363,31 +363,31 @@ def pruhtDraw(t):
     global imat
     global img2t
     if 1 == t:
-        imat = Image.open(resource_path('../Pics/cervena.png'))
+        imat = Image.open(resource_path('Pics/cervena.png'))
 
     elif 2 == t:
-        imat = Image.open(resource_path('../Pics/zelena.png'))
+        imat = Image.open(resource_path('Pics/zelena.png'))
 
     elif 3 == t:
-        imat = Image.open(resource_path('../Pics/modra.png'))
+        imat = Image.open(resource_path('Pics/modra.png'))
 
     elif 4 == t:
-        imat = Image.open(resource_path('../Pics/fialova.png'))
+        imat = Image.open(resource_path('Pics/fialova.png'))
 
     elif 5 == t:
-        imat = Image.open(resource_path('../Pics/seda.png'))
+        imat = Image.open(resource_path('Pics/seda.png'))
 
     elif 6 == t:
-        imat = Image.open(resource_path('../Pics/zlata.png'))
+        imat = Image.open(resource_path('Pics/zlata.png'))
 
     elif 7 == t:
-        imat = Image.open(resource_path('../Pics/stribrna.png'))
+        imat = Image.open(resource_path('Pics/stribrna.png'))
 
     elif 8 == t:
-        imat = Image.open(resource_path('../Pics/default.png'))
+        imat = Image.open(resource_path('Pics/default.png'))
 
     else:
-        imat = Image.open(resource_path('../Pics/hneda.png'))
+        imat = Image.open(resource_path('Pics/hneda.png'))
 
     imat = imat.resize((480, 270), Image.ANTIALIAS)
     img2t = ImageTk.PhotoImage(image=imat)

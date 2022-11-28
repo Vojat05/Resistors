@@ -24,9 +24,9 @@ p_hotovo = 0
 toler = 0
 
 # Images for the background and the background resistor shape.
-imgbck = Image.open(resource_path('../Pics/bg.jpg'))
+imgbck = Image.open(resource_path('Pics/bg.jpg'))
 imgbckk = ImageTk.PhotoImage(image=imgbck)
-image = Image.open(resource_path('../Pics/normal2.png'))
+image = Image.open(resource_path('Pics/normal2.png'))
 img1 = ImageTk.PhotoImage(image=image)
 
 # labels for the column names
