@@ -11,13 +11,13 @@ window = Tk()
 canvas = Canvas(window, width=900, height=710)
 
 # Variables for buttons and answer data
-x = IntVar()
-y = IntVar()
-z = IntVar()
-n = IntVar()
-t = IntVar()
-h = IntVar()
-getVal = StringVar()
+x: int = 0
+y: int = 0
+z: int = 0
+n: int = 0
+t: int = 0
+h: int = 0
+getVal: str = ""
 
 # Variables for the answer and the toleration answer
 p_hotovo = 0
