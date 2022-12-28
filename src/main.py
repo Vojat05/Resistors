@@ -4,6 +4,7 @@ from functions import *
 from valuedata import *
 
 
+
 # Main GUI setup
 window.geometry("1920x1080")
 window.title("Resistor Calculator")
@@ -55,6 +56,7 @@ label_polyoval(width=100, height=32, locx=81, locy=70)
 label_polyoval(width=170, height=32, locx=253, locy=655)
 
 # Calling the functions to draw the default color stripes for the resistor on startup
+
 # First stripe
 pruh1Draw(0)
 # Second stripe
